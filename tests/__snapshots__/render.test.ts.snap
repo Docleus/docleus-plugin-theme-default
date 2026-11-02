@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`default theme > renders a representative page 1`] = `
+"<!doctype html>
+<html lang="en" style="--dt-accent-light: #0a7d55; --dt-accent-dark: #0c9565">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install – Acme Docs</title>
+<script type="importmap">{"imports":{"react":"../../_assets/docleus/vendor/react.js"}}</script><script type="module" src="../../_assets/docleus/runtime.js"></script>
+<script>(function(){var m=null;try{var s=localStorage.getItem("docleus-theme");if(s==="light"||s==="dark")m=s}catch(e){}if(m)document.documentElement.dataset.theme=m})()</script>
+<script>(function(){var r=document.documentElement;r.dataset.sidebar="closed";function set(open,focus){r.dataset.sidebar=open?"open":"closed";var b=document.querySelector("[data-sidebar-toggle]");if(b){b.setAttribute("aria-expanded",String(open));if(focus)b.focus()}}document.addEventListener("click",function(e){var t=e.target;if(t instanceof Element&&t.closest("[data-sidebar-toggle]"))set(r.dataset.sidebar!=="open",false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&r.dataset.sidebar==="open")set(false,true)})})()</script>
+<link rel="stylesheet" href="../../_assets/plugins/docleus-plugin-theme-default@0.0.1/theme.css">
+</head>
+<body>
+<a class="dt-skip-link" href="#main">Skip to content</a>
+<header class="dt-header"><button type="button" class="dt-sidebar-toggle" data-sidebar-toggle aria-controls="dt-sidebar" aria-expanded="false" aria-label="Pages"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><a class="dt-logo" href="../../">Acme Docs</a><button type="button" class="dt-theme-toggle" data-theme-toggle aria-label="Dark mode" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button></header>
+<div class="dt-layout dt-has-toc">
+<aside id="dt-sidebar" class="dt-sidebar"><nav aria-label="Pages"><ul><li><a href="../../">Introduction</a></li><li><a href="../../guides/">Guides</a><ul><li><a href="../../guides/install/" aria-current="page">Install</a></li><li><a href="../../guides/configure/">Configure</a></li></ul></li><li><a href="../../reference/">Reference</a></li></ul></nav></aside>
+<main id="main" class="dt-main">
+<h1>Install</h1>
+<article class="dt-content"><p>Install the CLI.</p><h2 id="requirements">Requirements</h2><p>Node 24.</p><h3 id="macos">macOS</h3><h4 id="homebrew">Homebrew</h4><h2 id="next-steps">Next steps</h2></article>
+<nav class="dt-pager" aria-label="Previous and next pages"><a class="dt-pager-prev" rel="prev" href="../../guides/"><span class="dt-pager-label">Previous</span><span class="dt-pager-title">Guides</span></a><a class="dt-pager-next" rel="next" href="../../guides/configure/"><span class="dt-pager-label">Next</span><span class="dt-pager-title">Configure</span></a></nav>
+</main>
+<aside class="dt-toc"><nav aria-label="On this page"><p class="dt-toc-title">On this page</p><ul><li data-depth="2"><a href="#requirements">Requirements</a></li><li data-depth="3"><a href="#macos">macOS</a></li><li data-depth="2"><a href="#next-steps">Next steps</a></li></ul></nav></aside>
+</div>
+<footer class="dt-footer"><p>Built with Docleus</p></footer>
+</body>
+</html>"
+`;

@@ -1,0 +1,9 @@
+{
+  "extends": "@docleus/config/tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"]
+  },
+  "include": ["src", "tests", "playwright.config.ts"],
+  "references": [{ "path": "../docleus-core/packages/kernel/vendor/cordis" }]
+}
