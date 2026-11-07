@@ -3,6 +3,7 @@ import { mkdtemp, readFile, readdir, rm, stat } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseManifest } from "@docleus/sdk";
 import { expect, test, type Page } from "@playwright/test";
 import {
   editorBody,
@@ -19,6 +20,25 @@ import {
 
 const LIGHT_BACKGROUND = "rgb(255, 255, 255)";
 const DARK_BACKGROUND = "rgb(17, 17, 17)";
+const THEME_VERSION = parseManifest(
+  JSON.parse(
+    await readFile(
+      new URL("../../docleus.plugin.json", import.meta.url),
+      "utf8",
+    ),
+  ),
+).version;
+const TEMPLATE_VERSION = parseManifest(
+  JSON.parse(
+    await readFile(
+      new URL(
+        "../../../docleus-plugin-template/docleus.plugin.json",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  ),
+).version;
 
 function sidebar(page: Page) {
   return page.getByRole("navigation", { name: "Pages", exact: true });
@@ -199,7 +219,7 @@ test("the counter island mounts and counts; other pages load no island code", as
   expect(
     islandRequests.some((request) =>
       request.endsWith(
-        "/_assets/plugins/docleus-plugin-template@0.0.1/counter.js",
+        `/_assets/plugins/docleus-plugin-template@${TEMPLATE_VERSION}/counter.js`,
       ),
     ),
   ).toBe(true);
@@ -443,8 +463,8 @@ test("docleus export writes the active publication with relative URLs", async ({
       "guide/index.html",
       "guide/advanced/index.html",
       "counter/index.html",
-      "_assets/plugins/docleus-plugin-theme-default@0.0.1/theme.css",
-      "_assets/plugins/docleus-plugin-template@0.0.1/counter.js",
+      `_assets/plugins/docleus-plugin-theme-default@${THEME_VERSION}/theme.css`,
+      `_assets/plugins/docleus-plugin-template@${TEMPLATE_VERSION}/counter.js`,
     ]) {
       expect(await exists(join(out, file)), file).toBe(true);
     }
