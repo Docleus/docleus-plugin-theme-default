@@ -1,6 +1,6 @@
 {
   "name": "@docleus/plugin-theme-default",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "type": "module",
   "description": "Default site theme for Docleus: navigation, table of contents, prev/next links and dark mode.",
@@ -31,7 +31,7 @@
     "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm deps && pnpm license && pnpm test"
   },
   "peerDependencies": {
-    "@docleus/sdk": ">=0.0.1 <0.0.4"
+    "@docleus/sdk": ">=0.0.1 <0.0.5"
   },
   "devDependencies": {
     "@docleus/config": "link:../docleus-core/packages/config",
