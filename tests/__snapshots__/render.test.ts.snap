@@ -10,7 +10,7 @@ exports[`default theme > renders a representative page 1`] = `
 <script type="importmap">{"imports":{"react":"../../_assets/docleus/vendor/react.js"}}</script><script type="module" src="../../_assets/docleus/runtime.js"></script>
 <script>(function(){var m=null;try{var s=localStorage.getItem("docleus-theme");if(s==="light"||s==="dark")m=s}catch(e){}if(m)document.documentElement.dataset.theme=m})()</script>
 <script>(function(){var r=document.documentElement;r.dataset.sidebar="closed";function set(open,focus){r.dataset.sidebar=open?"open":"closed";var b=document.querySelector("[data-sidebar-toggle]");if(b){b.setAttribute("aria-expanded",String(open));if(focus)b.focus()}}document.addEventListener("click",function(e){var t=e.target;if(t instanceof Element&&t.closest("[data-sidebar-toggle]"))set(r.dataset.sidebar!=="open",false)});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&r.dataset.sidebar==="open")set(false,true)})})()</script>
-<link rel="stylesheet" href="../../_assets/plugins/docleus-plugin-theme-default@0.0.6/theme.css">
+<link rel="stylesheet" href="../../_assets/plugins/docleus-plugin-theme-default@0.0.7/theme.css">
 </head>
 <body>
 <a class="dt-skip-link" href="#main">Skip to content</a>
